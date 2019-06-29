@@ -1,6 +1,58 @@
 <!--
-Create a web form
-	Input elements
+Creating a web form.
+Input elements are a convenient way to get input from your user.
+
+https://learn.freecodecamp.org/responsive-web-design/basic-html-and-html5/create-a-text-field
+https://learn.freecodecamp.org/responsive-web-design/basic-html-and-html5/add-placeholder-text-to-a-text-field
+https://learn.freecodecamp.org/responsive-web-design/basic-html-and-html5/create-a-form-element
+https://learn.freecodecamp.org/responsive-web-design/basic-html-and-html5/add-a-submit-button-to-a-form
+https://learn.freecodecamp.org/responsive-web-design/basic-html-and-html5/use-html5-to-require-a-field
+https://learn.freecodecamp.org/responsive-web-design/basic-html-and-html5/create-a-set-of-radio-buttons
+https://learn.freecodecamp.org/responsive-web-design/basic-html-and-html5/create-a-set-of-checkboxes
 -->
 
-<input type="text">
+<!--Specifying an action attribute to the form element to submit data to a server-->
+
+<form action="/url-where-you-want-to-submit-form-data">
+	
+	<!--TEXT FIELD-->
+	<!--This is a nested text field or input element of type text.-->
+	<!--A required attribute has been added so that the user can't submit the form without completing this field.-->
+	<!--A placeholder attribute is set to "Name" which is displayed in the input element before the user has inputted anything.-->
+	<input type="text" required placeholder="Name">
+
+	<!--SUBMIT BUTTON-->
+	<!--Clicking this button will send the data from your form to the URL you specified with your form's action attribute.-->
+	<!--This is a button element of type submit and "Submit" as its text.-->
+	<button type="submit">Submit</button><br>
+
+	<!--RADIO BUTTON-->
+	<!--A label element with a for attribute set to the input elements id attribute which allows assistive technologies to create a linked relationship between the label and the child input element.-->
+	<!--This label element wraps the input element so it will automatically associate the radio button input with it.-->
+	<label for="male">
+		<!--This is an input element of type radio. Also known as a "radio button" which used when you want the user to only give you one answer out of multiple options.-->
+		<!--All related radio buttons should have the same name attribute to create a radio button group. By creating a radio group, selecting any single radio button will automatically deselect the other buttons within the same group, ensuring only one answer is provided by the user.-->
+		<!--A checked attribute is used inside of the input element to set the radio button to be checked by default.-->
+		<input id="male" type="radio" name="male-female" checked>male
+	</label>
+	<label for="female">
+		<input id="female" type="radio" name="male-female">female
+	</label><br>
+
+	<!--SET OF CHECKBOXES-->
+	<!--Forms commonly use checkboxes for questions that may have more than one answer.-->
+	<!--A label element with a for attribute set to the input elements id attribute which allows assistive technologies to create a linked relationship between the label and the child input element.-->
+	<!--This label element wraps the input element so it will automatically associate the radio button input with it.-->
+	<label for="HTML">
+		<!--This is an input element of type checkbox. It is used for questions that may have more than one answer.-->
+		<!--A checked attribute is used inside of the input element to set the checkbox to be checked by default.-->
+		<input id="HTML" type="checkbox" name="knowledge" checked>HTML
+	</label><br>
+	<label for="CSS">
+		<input id="CSS" type="checkbox" name="knowledge">CSS
+	</label><br>
+	<label for="javascript">
+		<input id="javascript" type="checkbox" name="knowledge">Javascript
+	</label>
+
+</form> 
